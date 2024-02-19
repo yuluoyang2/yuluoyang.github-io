@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>MyWeb - MeMeMe!</title>
+  <link rel="Shortcut Icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/animate.min.css">
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header class="top-bar"style="background-color: aliceblue;">
+    <h2><a href="index.html">首页</a></h2>
+    <h2><a href="fileCenter.html">课件中心</a></h2>
+    <h2><a href="register.html">注册页面</a></h2>
+    <h2><a href="#" onclick="logout()">登出系统</a></h2>
+  </header>
+
+  <main>
+    <div class="main-content">
+      <h2>您的个人信息</h2>
+    </div>
+
+    <div class="action-card">
+      <div id="message-card" class="animate__bounceIn" style="display: none;">服务器传回消息</div>
+      <form class="login-form" onsubmit="return interceptFormSubmit('update')">
+        <div class="form-item">
+          <label for="username">用户名</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div class="form-item">
+          <label for="email">性别</label>
+          <input type="radio" name="usersex" id="userfale" value="female"/>女
+          <input type="radio" name="usersex" id="userfale" value="male"/>男
+        </div>
+        <div class="form-item">
+          <label for="username">爱好</label>
+          <input type="text" name="userhabit" id="userhabit" placeholder="请输入你的课余爱好"/>
+        </div>
+        <div class="form-item">
+          <label for="password">新密码</label>
+          <input type="password" name="password" id="password" placeholder="留空将不修改密码" />
+        </div>
+        <div class="form-item">
+          <label for="password">确认密码</label>
+          <input type="password" name="password2" id="password2" placeholder="留空将不修改密码" />
+        </div>
+        <div class="form-item">
+          <input type="submit" value="修改" />
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const username = document.getElementById('username');
+    var userInfo = getLoginCookie();
+    if (userInfo == null)
+      window.location.href = './login.html';
+    username.value = userInfo.username;
+
+  </script>
+</body>
+
+</html>

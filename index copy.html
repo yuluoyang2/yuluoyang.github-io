@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>MyWeb - Welcome!</title>
+  <link rel="Shortcut Icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="script.js"></script>
+  <script>
+    const loginInfo = getLoginCookie();
+    if (loginInfo) {
+      window.location.href = "./afterLogin.html";
+    }
+  </script>
+</head>
+
+<body>
+  <header class="top-bar">
+    <h1><a href="index.html">首页</a></h1>
+    <nav>
+      <ul class="nav-items">
+        <li><a href="./login.html">登录</a></li>
+        <li><a href="./register.html">注册</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-content">
+      <h2>欢迎来到课堂首页</h2>
+    </div>
+    <div class="info-cards">
+      <div class="info-card-item">
+        <div class="card-title">本网站的功能</div>
+        <div class="card-content">
+          <ul>
+            <li>学生和教师的登录&注册</li>
+            <li>课件上传与下载</li>
+            <li>个人中心信息修改</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-card-item">
+        <div class="card-title">关于我自己</div>
+        <div class="card-content">
+          <ul>
+            <li>姓名：***</li>
+            <li>班级：**班</li>
+            <li>学号：********</li>
+            <li>邮箱：
+              <a href="mailto:****@***.***">********</a>
+            </li>
+        </div>
+      </div>
+    </div>
+    <div class="info-cards">
+      <div class="info-card-item">
+        <div class="card-title">考试资讯</div>
+        <div class="card-content">
+          <ul>
+            <li>6月30日：概率论</li>
+            <li>7月03日：习概论</li>
+            <li>7月04日：微机系统</li>
+            <li>7月05日：linux</li>
+        </div>
+      </div>
+      <div class="info-card-item">
+        <div class="card-title">学术信息</div>
+        <div class="card-content">
+          <ul>
+            <li>考古学院进行动员大会</li>
+            <li>计算机学院考试结束</li>
+            <li>大一学生补训军训</li>
+            <li>物理学院取得巨大进展</li>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

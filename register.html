@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>MyWeb - Register!</title>
+  <link rel="Shortcut Icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/animate.min.css">
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="script.js"></script>
+</head>
+<style type="text/css">
+  div.top-bar {
+    background-color: #eee;
+    color: black;
+    text-align: center;
+    width: 1000px;
+    margin: auto;
+    padding: 5px;
+  }
+</style>
+
+<body>
+  <header class="top-bar">
+    <h1><a href="index.html">首页</a></h1>
+    <nav>
+      <ul class="nav-items">
+        <li><a href="./login.html">已有账户，登录</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div  style="text-align: center; ">
+      <h2 style="text-align: center; font-size: large;" >注册页面</h2>
+    </div>
+
+    <div class="action-card">
+      <div id="message-card" style="display: none;">服务器传回消息</div>
+      <form class="login-form" id="register-form" onsubmit="return interceptFormSubmit('register')">
+        <div class="form-item">
+          <label for="email"style="font-size:medium; color: darkblue;">身份</label>
+          <input type="radio" name="type" id="student" value="student" checked="checked" />学生
+          <input type="radio" name="type" id="teacher" value="teacher" />教师
+        </div>
+        <div class="form-item">
+          <label for="username"style="font-size:medium; color: darkblue;">用户:</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div class="form-item">
+          <label for="password"style="font-size:medium; color: darkblue;">密码:</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div class="form-item">
+          <label for="password"style="font-size:medium; color: darkblue;">确认密码:</label>
+          <input type="password" name="password2" id="password2" />
+        </div>
+        <div class="form-item">
+          <input type="submit" value="注册" style="background-color: aqua; color:black;"/>
+        </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+
+</html>

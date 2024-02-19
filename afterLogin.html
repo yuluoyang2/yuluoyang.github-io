@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>MyWeb - Hi!</title>
+  <link rel="Shortcut Icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/animate.min.css">
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header class="top-bar" style="background-color: aquamarine;">
+    <h2><a href="index.html">首页</a></h2>
+    <h2><a href="fileCenter.html">课件中心</a></h2>
+    <h2> <a href="personalCenter.html">个人中心</a></h2>
+    <h2><a href="register.html">注册页面</a></h2>
+    <h2><a href="#" onclick="logout()">登出系统</a></h2>
+  </header>
+
+  <main>
+    <div class="main-content">
+      <h2 id="title">欢迎来到课堂网页</h2>
+    </div>
+    <div class="info-cards">
+      <div class="info-card-item">
+        <div class="card-title">网站功能</div>
+        <div class="card-content">
+          <ul>
+            <li>学生和教师的登录&注册</li>
+            <li>课件上传与下载</li>
+            <li>个人中心信息修改</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-card-item">
+        <div class="card-title">关于我</div>
+        <div class="card-content">
+          <ul>
+            <li>我的姓名</li>
+            <li>我的班级</li>
+            <li>我的学号</li>
+            <li>我的邮箱</li>
+        </div>
+      </div>
+    </div>
+    <div class="info-cards">
+      
+      <div class="info-card-item">
+        <div class="card-title">考试资讯</div>
+        <div class="card-content">
+          <ul>
+            <li>6月30日：概率论</li>
+            <li>7月03日：习概论</li>
+            <li>7月04日：微机系统</li>
+            <li>7月05日：linux</li>
+        </div>
+      </div>
+      <div class="info-card-item">
+        <div class="card-title">学术信息</div>
+        <div class="card-content">
+          <ul>
+            <li>考古学院进行动员大会</li>
+            <li>计算机学院考试结束</li>
+            <li>大一学生补训军训</li>
+            <li>物理学院取得巨大进展</li>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // 修改title
+    const loginInfo = getLoginCookie();
+    if (loginInfo) {
+      document.title = "MyWeb - Hi, " + loginInfo.username + "!";
+      document.getElementById("title").innerHTML = "你好啊，" + loginInfo.username + "!";
+      if (loginInfo.type == "student")
+        document.getElementById("sub-title").innerHTML = "您是" + loginInfo.type + "，可下载！";
+      else
+        document.getElementById("sub-title").innerHTML = "您是" + loginInfo.type + "，可上传或下载！";
+    } else {
+      window.location.href = "./index.html";
+    }
+  </script>
+</body>
+
+</html>

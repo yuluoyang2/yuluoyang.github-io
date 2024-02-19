@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>MyWeb - Login!</title>
+  <link rel="Shortcut Icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/animate.min.css">
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="script.js"></script>
+</head>
+<style type="text/css">
+  div.top-bar {
+    background-color: #eee;
+    color: black;
+    text-align: center;
+    width: 1000px;
+    margin: auto;
+    padding: 5px;
+  }
+</style>
+
+<body>
+  <header class="top-bar">
+    <h1><a href="index.html">首页</a></h1>
+    <nav>
+      <ul class="nav-items">
+        <li><a href="./register.html">注册</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div  style="text-align: center; ">
+    <h2 style="text-align: center; font-size: large;" >登录页面</h2>
+  </div>
+
+  <div class="action-card">
+    <div id="message-card" class="animate__bounceIn" style="display: none;">服务器传回消息</div>
+    <form class="login-form" onsubmit="return interceptFormSubmit('login')">
+      <div class="form-item">
+        <label for="username" style="font-size:medium; color: darkblue;">用户：</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div class="form-item">
+        <label for="password"  style="font-size:medium; color: darkblue;">密码：</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div class="form-item" >
+        <input type="submit" value="登录" style="background-color: aqua; color:black;"/>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
