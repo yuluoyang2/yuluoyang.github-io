@@ -1,2 +1,0 @@
-# yuluoyang.github-io
-blog
