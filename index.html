@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        html,
+        body {
+            font-size: 70%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .top-bar {
+            /* 顶部导航栏 */
+            height: 6rem;
+            position: sticky;
+            top: 0;
+            /* position
+                top 
+                设定位置    
+            */
+            background-color: rgba(255, 255, 255, 0.8);
+            /* 背景色和透明度 */
+            padding: 0 3rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            /*
+                flex弹性盒子
+                主轴的方向 默认为row
+                主轴方向设置
+                垂直主轴方向设置 
+             */
+        }
+
+        .top-bar h1 a {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 1px 0 10px lightblue;
+            /* 阴影 水平 垂直 半径 */
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .nav-items {
+            list-style-type: none;
+            /* 去除默认 */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-items li {
+            margin-left: 2rem;
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+            /* 定义元素范围变大
+                定义元素变换的速度 */
+        }
+
+        .nav-items li a {
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-shadow: 1px 0 10px lightblue;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .nav-items li:hover {
+            transform: scale(1.2);
+            /* color: gray; */
+            /* 元素放大到原来的1.2倍 */
+        }
+
+        .nav-items li a:hover {
+            color: gray;
+
+        }
+
+        .main-content {
+            margin: 5rem 0;
+            /* 上下边距为5rem 左右为0 */
+            text-align: center;
+            text-shadow: cornflowerblue 1px 0 10px;
+        }
+
+        .main-content h1 {
+            font-size: 3rem;
+        }
+
+        .info-cards {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: 5rem 0;
+        }
+
+        .info-cards-item {
+            width: 30%;
+            /* 设置卡片项的宽度为父容器宽度的30% */
+            margin: 1rem 0;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+        }
+
+        .card-content ul {
+            list-style-type: circle;
+            margin: 1rem 0;
+            padding: 0;
+        }
+
+        .card-content ul li {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            font-weight: lighter;
+        }
+
+        .page-footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #idd {
+            text-align: center;
+            text-shadow: lightslategray 1px 0 10px;
+        }
+
+        hr {
+            width: 80%;
+            margin: 10px auto;
+            height: 1px;
+            background-image: linear-gradient(to right,
+                    rgba(255, 255, 255, 0),
+                    cyan,
+                    rgba(0, 0, 0, 0));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        （1）头部区域-----top或header
+            Logo、主导航、搜索、注册、登录、版本等信息...
+        （2）主视觉区----banner
+            展示公司品牌形象、新品宣传、主题活动等轮播大图
+        （3）主要内容区---main
+            新闻动态、产品与服务、公司介绍等
+        （4）底部信息区---footer
+            网站地图、联系我们、版权信息、ICP备案号等信息
+     -->
+    <header class="top-bar">
+        <h1><a href="index.html">首页</a></h1>
+        <nav>
+            <ul class="nav-items">
+                <li><a href="login.html">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+            </ul>
+        </nav>
+        <!-- nav 为当前页面提供导航链接 -->
+    </header>
+    <main>
+        <div class="main-content">
+            <h1>欢迎来到课堂首页</h1>
+        </div>
+        <div class="info-cards">
+            <div class="info-cards-item">
+                <div class="card-title">本网站的功能</div>
+                <div class="card-content">
+                    <ul>
+                        <li>学生和教师的登录/注册</li>
+                        <li>课件上传和下载</li>
+                        <li>个人中心信息修改</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-cards-item">
+                <div class="card-title">关于我自己</div>
+                <div class="card-content">
+                    <ul>
+                        <li>姓名：***</li>
+                        <li>班级：**班</li>
+                        <li>学号：********</li>
+                        <li>邮箱：
+                            <a href="mailto:****@***.***">********</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="info-cards">
+            <div class="info-cards-item">
+                <div class="card-title">考试资讯</div>
+                <div class="card-content">
+                    <ul>
+                        <li>6月30日：概率论</li>
+                        <li>7月03日：习概论</li>
+                        <li>7月04日：微机系统</li>
+                        <li>7月05日：linux</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-cards-item">
+                <div class="card-title">校园日报</div>
+                <div class="card-content">
+                    <ul>
+                        <li>考古学院进行动员大会</li>
+                        <li>计算机学院考试结束</li>
+                        <li>大一学生补训军训</li>
+                        <li>物理学院取得巨大进展</li>
+                </div>
+            </div>
+        </div>
+        <div class="info-cards">
+            <div class="info-cards-item">
+                <div class="card-title">考试资讯</div>
+                <div class="card-content">
+                    <ul>
+                        <li>6月30日：概率论</li>
+                        <li>7月03日：习概论</li>
+                        <li>7月04日：微机系统</li>
+                        <li>7月05日：linux</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-cards-item">
+                <div class="card-title">校园日报</div>
+                <div class="card-content">
+                    <ul>
+                        <li>考古学院进行动员大会</li>
+                        <li>计算机学院考试结束</li>
+                        <li>大一学生补训军训</li>
+                        <li>物理学院取得巨大进展</li>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="page-footer">
+            <hr>
+            <div>
+                <p>Posted by: Yuluoyang</p>
+            </div>
+            <div>
+                <a href="login.html" id="idd">联系方式</a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
